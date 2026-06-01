@@ -36,7 +36,7 @@
       label: dashboards and analytical reports delivered
     - value: 27+
       label: KPIs standardized
-    - value: 5d → 0.5h
+    - value: 5d &rarr; 0.5h
       label: reporting cycle improved
   metrics:
     - 20+ dashboards and analytical reports delivered
@@ -61,9 +61,9 @@
   accent: "#77f2b2"
   summary: Designed AI-assisted workflow automation for insight summarization and document analysis, helping business teams reduce repetitive analytical work while keeping human review in the decision loop. The solution combined Python, APIs, LLM capabilities, automation scripts, and n8n-based workflow orchestration.
   highlights:
-    - value: 10 → 2
+    - value: 10 &rarr; 2
       label: manual steps reduced to guided steps
-    - value: 4h → 10m
+    - value: 4h &rarr; 10m
       label: task completion time reduced
     - value: 100+
       label: reports, documents, or requests processed per day

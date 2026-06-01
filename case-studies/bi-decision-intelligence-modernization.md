@@ -8,7 +8,7 @@ metrics:
     label: dashboards and analytical reports delivered
   - value: 27+
     label: KPIs standardized
-  - value: 5d → 0.5h
+  - value: 5d &rarr; 0.5h
     label: reporting cycle improved
 impact:
   - 20+ dashboards and analytical reports delivered

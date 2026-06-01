@@ -4,9 +4,9 @@ title: AI Workflow Automation
 summary: Designed AI-assisted workflow automation for insight summarization and document analysis while keeping human review in the decision loop.
 category: AI Workflow Automation
 metrics:
-  - value: 10 → 2
+  - value: 10 &rarr; 2
     label: manual steps reduced to guided steps
-  - value: 4h → 10m
+  - value: 4h &rarr; 10m
     label: task completion time reduced
   - value: 100+
     label: reports, documents, or requests processed per day
