@@ -11,14 +11,14 @@
       <a class="button button-secondary" href="{{ profile.linkedin }}" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
     </div>
     <a class="email-link" href="mailto:{{ profile.email }}"><span>Email</span> {{ profile.email }}</a>
-    <div class="hero-marquee" aria-label="Portfolio highlights">
-      <div class="marquee-track">
-        {% for i in (1..4) %}<span>{{ profile.marquee }}</span>{% endfor %}
-      </div>
-    </div>
   </div>
 
   <aside class="hero-panel" aria-label="Architecture focus areas">
+    <div class="hero-orbit" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <div class="signal-map">
       <div class="signal"><strong>20+</strong><span>enterprise systems integrated</span></div>
       <div class="signal"><strong>150+</strong><span>pipelines and workflows</span></div>
@@ -26,11 +26,19 @@
       <div class="signal"><strong>5+</strong><span>countries supported</span></div>
     </div>
     <div class="flow-line" aria-label="Enterprise data flow">
-      <span class="node">Systems</span>
+      <span class="node"><svg class="icon"><use href="#icon-database"></use></svg>Systems</span>
       <span class="connector" aria-hidden="true"></span>
-      <span class="node">Platforms</span>
+      <span class="node"><svg class="icon"><use href="#icon-cloud"></use></svg>Platforms</span>
       <span class="connector" aria-hidden="true"></span>
-      <span class="node">Decisions</span>
+      <span class="node"><svg class="icon"><use href="#icon-trending"></use></svg>Decisions</span>
     </div>
   </aside>
+
+  <div class="hero-marquee" aria-label="Portfolio highlights: {{ profile.marquee }}">
+    <span>Data Integration</span>
+    <span>AI Automation</span>
+    <span>Analytics</span>
+    <span>5 Countries</span>
+    <span>150+ Pipelines</span>
+  </div>
 </section>

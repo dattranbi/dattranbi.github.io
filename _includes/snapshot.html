@@ -6,14 +6,18 @@
   </div>
   <div class="grid snapshot-grid">
     {% for stat in site.data.stats %}
-      <div class="card stat-card">
-        <span class="stat-icon" aria-hidden="true"><svg class="icon"><use href="#icon-{{ stat.icon }}"></use></svg></span>
-        {% if stat.value %}
-          <span class="stat-value" data-count="{{ stat.value }}" data-suffix="{{ stat.suffix }}">0{{ stat.suffix }}</span>
-        {% else %}
-          <span class="stat-value">{{ stat.display }}</span>
-        {% endif %}
-        <span class="stat-label">{{ stat.label }}</span>
+      <div class="card stat-card" style="--stat-fill: {{ stat.chart }}%;">
+        <div class="stat-chart" aria-hidden="true">
+          <span class="stat-icon"><svg class="icon"><use href="#icon-{{ stat.icon }}"></use></svg></span>
+        </div>
+        <div>
+          {% if stat.value %}
+            <span class="stat-value" data-count="{{ stat.value }}" data-suffix="{{ stat.suffix }}">0{{ stat.suffix }}</span>
+          {% else %}
+            <span class="stat-value">{{ stat.display }}</span>
+          {% endif %}
+          <span class="stat-label">{{ stat.label }}</span>
+        </div>
       </div>
     {% endfor %}
   </div>
