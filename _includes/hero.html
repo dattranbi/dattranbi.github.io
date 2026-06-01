@@ -1,0 +1,36 @@
+{% assign profile = site.data.profile %}
+<section class="section hero reveal is-visible" aria-labelledby="hero-heading">
+  <div class="hero-copy">
+    <span class="eyebrow">{{ profile.eyebrow }}</span>
+    <h1 id="hero-heading">{{ profile.name }}</h1>
+    <p class="hero-title">{{ profile.title }}</p>
+    <p class="hero-statement">{{ profile.positioning }}</p>
+    <p class="hero-support">{{ profile.focus }}</p>
+    <div class="cta-row" aria-label="Primary actions">
+      <a class="button button-primary" href="#work">{{ profile.primary_cta }}</a>
+      <a class="button button-secondary" href="{{ profile.linkedin }}" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+    </div>
+    <a class="email-link" href="mailto:{{ profile.email }}"><span>Email</span> {{ profile.email }}</a>
+    <div class="hero-marquee" aria-label="Portfolio highlights">
+      <div class="marquee-track">
+        {% for i in (1..4) %}<span>{{ profile.marquee }}</span>{% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <aside class="hero-panel" aria-label="Architecture focus areas">
+    <div class="signal-map">
+      <div class="signal"><strong>20+</strong><span>enterprise systems integrated</span></div>
+      <div class="signal"><strong>150+</strong><span>pipelines and workflows</span></div>
+      <div class="signal"><strong>20+</strong><span>dashboards and reports</span></div>
+      <div class="signal"><strong>5+</strong><span>countries supported</span></div>
+    </div>
+    <div class="flow-line" aria-label="Enterprise data flow">
+      <span class="node">Systems</span>
+      <span class="connector" aria-hidden="true"></span>
+      <span class="node">Platforms</span>
+      <span class="connector" aria-hidden="true"></span>
+      <span class="node">Decisions</span>
+    </div>
+  </aside>
+</section>

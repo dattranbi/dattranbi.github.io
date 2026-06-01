@@ -1,0 +1,17 @@
+{% assign profile = site.data.profile %}
+{% assign page_title = page.title | default: site.title %}
+{% unless page_title contains profile.name %}{% assign page_title = page_title | append: ' | ' | append: profile.name %}{% endunless %}
+{% assign meta_description = page.description | default: page.summary | default: profile.meta_description | default: site.description %}
+{% assign canonical_url = page.url | absolute_url %}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="{{ meta_description | escape }}">
+<meta property="og:title" content="{{ page_title | escape }}">
+<meta property="og:description" content="{{ meta_description | escape }}">
+<meta property="og:type" content="{{ page.og_type | default: 'website' }}">
+<meta property="og:url" content="{{ canonical_url }}">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="{{ canonical_url }}">
+<meta name="theme-color" content="#06101f">
+<link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+<title>{{ page_title | escape }}</title>

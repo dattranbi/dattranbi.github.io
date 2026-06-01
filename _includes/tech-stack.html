@@ -1,0 +1,19 @@
+<section class="section reveal" id="tech-stack" aria-labelledby="tech-heading">
+  <div class="section-heading">
+    <span class="eyebrow">Tech Stack</span>
+    <h2 id="tech-heading">Tools selected for enterprise-grade data and analytics delivery.</h2>
+    <p>Hands-on across integration, orchestration, BI, cloud platforms, data engineering, and AI-assisted automation.</p>
+  </div>
+  <div class="grid tech-grid">
+    {% for group in site.data.tech_stack %}
+      <article class="card tech-card">
+        <h3>{{ group.title }}</h3>
+        <ul class="tech-list">
+          {% for tool in group.tools %}
+            <li>{% if tool.logo %}<span class="logo {{ tool.logo_class }}" aria-hidden="true">{{ tool.logo }}</span>{% endif %}{{ tool.name }}</li>
+          {% endfor %}
+        </ul>
+      </article>
+    {% endfor %}
+  </div>
+</section>

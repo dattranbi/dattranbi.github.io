@@ -1,0 +1,50 @@
+- title: Data Integration & Orchestration
+  tools:
+    - name: Talend
+    - name: Apache Airflow
+      logo: AF
+      logo_class: logo-airflow
+    - name: SSIS
+    - name: APIs
+- title: BI & Analytics
+  tools:
+    - name: Power BI
+      logo: PBI
+      logo_class: logo-powerbi
+    - name: Tableau
+    - name: SAP BusinessObjects
+    - name: Google Data Studio
+- title: Cloud & Data Platforms
+  tools:
+    - name: Microsoft Fabric
+    - name: Azure
+      logo: AZ
+      logo_class: logo-azure
+    - name: AWS
+      logo: AWS
+      logo_class: logo-aws
+    - name: GCP
+      logo: G
+      logo_class: logo-gcp
+    - name: Dynamics 365
+- title: Data Engineering
+  tools:
+    - name: Python
+      logo: Py
+      logo_class: logo-python
+    - name: DBT
+    - name: SQL
+    - name: SAP HANA
+    - name: SQL Server
+    - name: MySQL
+    - name: Oracle
+    - name: SingleStore
+- title: AI & Automation
+  tools:
+    - name: Python automation
+      logo: Py
+      logo_class: logo-python
+    - name: LLM-assisted workflows
+    - name: API automation
+    - name: n8n
+    - name: human-in-the-loop review

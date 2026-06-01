@@ -1,0 +1,15 @@
+{% assign profile = site.data.profile %}
+<section class="section reveal" id="contact" aria-labelledby="contact-heading">
+  <div class="contact-card">
+    <div>
+      <span class="eyebrow">Contact</span>
+      <h2 id="contact-heading">Strategic data, analytics, and AI workflow conversations.</h2>
+      <p>Open to strategic conversations around enterprise data platforms, analytics modernization, AI-enabled workflows, and leadership roles in data transformation.</p>
+    </div>
+    <div class="contact-links" aria-label="Contact links">
+      <a class="button button-primary" href="mailto:{{ profile.email }}">Email</a>
+      <a class="button button-secondary" href="{{ profile.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a class="button button-secondary" href="{{ profile.github }}" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
+  </div>
+</section>
