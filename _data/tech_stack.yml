@@ -1,50 +1,62 @@
 - title: Data Integration & Orchestration
   tools:
     - name: Talend
+      logo_url: /assets/logos/talend.svg
     - name: Apache Airflow
-      logo: AF
-      logo_class: logo-airflow
+      logo_url: /assets/logos/apache-airflow.svg
     - name: SSIS
+      logo_url: /assets/logos/sql-server.svg
     - name: APIs
+      logo_url: /assets/logos/openapi.svg
 - title: BI & Analytics
   tools:
     - name: Power BI
-      logo: PBI
-      logo_class: logo-powerbi
+      logo_url: /assets/logos/power-bi.svg
     - name: Tableau
+      logo_url: /assets/logos/tableau.svg
     - name: SAP BusinessObjects
-    - name: Google Data Studio
+      logo_url: /assets/logos/sap.svg
+    - name: Looker Studio
+      logo_url: /assets/logos/looker.svg
 - title: Cloud & Data Platforms
   tools:
     - name: Microsoft Fabric
+      logo_url: /assets/logos/microsoft.svg
     - name: Azure
-      logo: AZ
-      logo_class: logo-azure
+      logo_url: /assets/logos/azure.svg
     - name: AWS
-      logo: AWS
-      logo_class: logo-aws
+      logo_url: /assets/logos/aws.svg
     - name: GCP
-      logo: G
-      logo_class: logo-gcp
+      logo_url: /assets/logos/google-cloud.svg
     - name: Dynamics 365
+      logo_url: /assets/logos/microsoft.svg
 - title: Data Engineering
   tools:
     - name: Python
-      logo: Py
-      logo_class: logo-python
-    - name: DBT
+      logo_url: /assets/logos/python.svg
+    - name: dbt
+      logo_url: /assets/logos/dbt.svg
     - name: SQL
+      logo_url: /assets/logos/mysql.svg
     - name: SAP HANA
+      logo_url: /assets/logos/sap.svg
     - name: SQL Server
+      logo_url: /assets/logos/sql-server.svg
     - name: MySQL
+      logo_url: /assets/logos/mysql.svg
     - name: Oracle
+      logo_url: /assets/logos/oracle.svg
     - name: SingleStore
+      logo_url: /assets/logos/singlestore.svg
 - title: AI & Automation
   tools:
     - name: Python automation
-      logo: Py
-      logo_class: logo-python
+      logo_url: /assets/logos/python.svg
     - name: LLM-assisted workflows
+      logo_url: /assets/logos/openai.svg
     - name: API automation
+      logo_url: /assets/logos/openapi.svg
     - name: n8n
-    - name: human-in-the-loop review
+      logo_url: /assets/logos/n8n.svg
+    - name: Human-in-the-loop review
+      logo_url: /assets/logos/github-actions.svg

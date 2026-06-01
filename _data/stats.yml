@@ -1,23 +1,29 @@
 - icon: calendar
   value: 10
   suffix: +
+  chart: 72
   label: years in Data Integration & Analytics
 - icon: network
   value: 20
   suffix: +
+  chart: 64
   label: enterprise systems integrated
 - icon: pipeline
   value: 150
   suffix: +
+  chart: 92
   label: data pipelines and workflows
 - icon: dashboard
   value: 20
   suffix: +
+  chart: 68
   label: dashboards and analytical reports
 - icon: globe
   value: 5
   suffix: +
+  chart: 58
   label: countries supported
 - icon: spark
   display: AI-assisted
+  chart: 76
   label: workflow automation experience

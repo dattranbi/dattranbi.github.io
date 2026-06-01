@@ -10,7 +10,7 @@
         <h3>{{ group.title }}</h3>
         <ul class="tech-list">
           {% for tool in group.tools %}
-            <li>{% if tool.logo %}<span class="logo {{ tool.logo_class }}" aria-hidden="true">{{ tool.logo }}</span>{% endif %}{{ tool.name }}</li>
+            <li>{% if tool.logo_url %}<img class="tool-logo" src="{{ tool.logo_url | relative_url }}" alt="" decoding="async">{% endif %}{{ tool.name }}</li>
           {% endfor %}
         </ul>
       </article>
