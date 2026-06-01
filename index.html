@@ -1,2 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dat Tran, Enterprise Data & AI Analytics Architect, designs data platforms, integrations, and AI-enabled analytics systems for trusted enterprise decisions.">
+  <title>Dat Tran | Enterprise Data & AI Analytics Architect</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #06101f;
+      --bg-deep: #030814;
+      --panel: rgba(13, 27, 49, 0.78);
+      --panel-strong: rgba(16, 34, 61, 0.95);
+      --line: rgba(139, 181, 232, 0.18);
+      --line-strong: rgba(116, 199, 255, 0.38);
+      --text: #eef6ff;
+      --muted: #aab9cc;
+      --soft: #d2deea;
+      --accent: #6fe7ff;
+      --accent-2: #9d7cff;
+      --accent-3: #77f2b2;
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.36);
+      --radius-lg: 28px;
+      --radius-md: 20px;
+      --radius-sm: 14px;
+      --max-width: 1180px;
+    }
 
-Hellow
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 92px;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 16% 12%, rgba(111, 231, 255, 0.18), transparent 26rem),
+        radial-gradient(circle at 82% 10%, rgba(157, 124, 255, 0.16), transparent 28rem),
+        linear-gradient(135deg, var(--bg-deep) 0%, var(--bg) 48%, #07182a 100%);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(111, 231, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(111, 231, 255, 0.06) 1px, transparent 1px),
+        radial-gradient(circle at 24% 34%, rgba(111, 231, 255, 0.12) 0 1px, transparent 2px),
+        radial-gradient(circle at 72% 26%, rgba(157, 124, 255, 0.12) 0 1px, transparent 2px);
+      background-size: 72px 72px, 72px 72px, 180px 180px, 220px 220px;
+      mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent 78%);
+      opacity: 0.8;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 4px;
+      border-radius: 10px;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid var(--line);
+      background: rgba(3, 8, 20, 0.78);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      max-width: var(--max-width);
+      padding: 18px 24px;
+    }
+
+    .brand {
+      align-items: center;
+      display: inline-flex;
+      gap: 12px;
+      font-weight: 750;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-mark {
+      align-items: center;
+      background: linear-gradient(135deg, rgba(111, 231, 255, 0.26), rgba(157, 124, 255, 0.22));
+      border: 1px solid var(--line-strong);
+      border-radius: 14px;
+      box-shadow: 0 0 26px rgba(111, 231, 255, 0.16);
+      display: inline-flex;
+      height: 42px;
+      justify-content: center;
+      width: 42px;
+    }
+
+    .nav-links {
+      align-items: center;
+      display: flex;
+      gap: 6px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      border: 1px solid transparent;
+      border-radius: 999px;
+      color: var(--muted);
+      display: inline-flex;
+      font-size: 0.94rem;
+      padding: 9px 13px;
+      transition: background 180ms ease, border-color 180ms ease, color 180ms ease;
+    }
+
+    .nav-links a:hover {
+      background: rgba(111, 231, 255, 0.08);
+      border-color: var(--line);
+      color: var(--text);
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+    }
+
+    .section {
+      margin: 0 auto;
+      max-width: var(--max-width);
+      padding: 92px 24px;
+    }
+
+    .hero {
+      display: grid;
+      gap: 48px;
+      grid-template-columns: minmax(0, 1.18fr) minmax(320px, 0.82fr);
+      min-height: calc(100vh - 80px);
+      padding-top: 104px;
+      place-items: center;
+    }
+
+    .eyebrow {
+      align-items: center;
+      color: var(--accent);
+      display: inline-flex;
+      font-size: 0.78rem;
+      font-weight: 750;
+      gap: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      border-radius: 999px;
+      content: "";
+      display: inline-block;
+      height: 2px;
+      width: 36px;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 8vw, 6.8rem);
+      letter-spacing: -0.075em;
+      line-height: 0.9;
+      margin: 18px 0 18px;
+    }
+
+    .hero-title {
+      color: var(--soft);
+      font-size: clamp(1.25rem, 2vw, 1.65rem);
+      font-weight: 650;
+      letter-spacing: -0.02em;
+      margin-bottom: 22px;
+    }
+
+    .hero-statement {
+      color: var(--soft);
+      font-size: clamp(1.18rem, 2.2vw, 1.58rem);
+      line-height: 1.45;
+      max-width: 780px;
+    }
+
+    .hero-support {
+      color: var(--muted);
+      font-size: 1.02rem;
+      margin-bottom: 30px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+
+    .button {
+      align-items: center;
+      border-radius: 999px;
+      display: inline-flex;
+      font-weight: 750;
+      justify-content: center;
+      min-height: 48px;
+      padding: 13px 20px;
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      background: linear-gradient(135deg, var(--accent), #7fa5ff);
+      color: #03101f;
+      box-shadow: 0 18px 48px rgba(111, 231, 255, 0.18);
+    }
+
+    .button-secondary {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--line-strong);
+      color: var(--text);
+    }
+
+    .email-link {
+      color: var(--muted);
+      display: inline-flex;
+      font-size: 0.98rem;
+      gap: 8px;
+    }
+
+    .email-link span {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .hero-panel {
+      background:
+        linear-gradient(145deg, rgba(16, 34, 61, 0.95), rgba(7, 18, 35, 0.82)),
+        radial-gradient(circle at 80% 18%, rgba(111, 231, 255, 0.2), transparent 12rem);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      padding: 28px;
+      position: relative;
+      width: 100%;
+    }
+
+    .hero-panel::before {
+      background: linear-gradient(90deg, transparent, rgba(111, 231, 255, 0.52), transparent);
+      content: "";
+      height: 1px;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .signal-map {
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      display: grid;
+      gap: 14px;
+      grid-template-columns: 1fr 1fr;
+      margin-bottom: 24px;
+      padding: 18px;
+    }
+
+    .signal {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px;
+    }
+
+    .signal strong {
+      color: var(--text);
+      display: block;
+      font-size: 1.35rem;
+      letter-spacing: -0.04em;
+      line-height: 1;
+    }
+
+    .signal span {
+      color: var(--muted);
+      display: block;
+      font-size: 0.82rem;
+      margin-top: 7px;
+    }
+
+    .flow-line {
+      align-items: center;
+      display: flex;
+      gap: 10px;
+      justify-content: space-between;
+      margin: 10px 0 0;
+    }
+
+    .node {
+      background: rgba(111, 231, 255, 0.12);
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      color: var(--soft);
+      font-size: 0.8rem;
+      padding: 8px 10px;
+      white-space: nowrap;
+    }
+
+    .connector {
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      flex: 1;
+      height: 1px;
+      opacity: 0.7;
+    }
+
+    .section-heading {
+      max-width: 770px;
+      margin-bottom: 34px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(2rem, 4vw, 3.3rem);
+      letter-spacing: -0.055em;
+      line-height: 1.02;
+      margin: 10px 0 14px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 1.06rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .snapshot-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      box-shadow: 0 18px 52px rgba(0, 0, 0, 0.18);
+      padding: 24px;
+    }
+
+    .stat-value {
+      color: var(--text);
+      display: block;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -0.055em;
+      line-height: 1;
+    }
+
+    .stat-label {
+      color: var(--muted);
+      display: block;
+      margin-top: 10px;
+    }
+
+    .capability-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card h3 {
+      font-size: 1.12rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+    }
+
+    .card p,
+    .card li {
+      color: var(--muted);
+    }
+
+    .work-list {
+      display: grid;
+      gap: 22px;
+    }
+
+    .project-card {
+      background: linear-gradient(145deg, rgba(16, 34, 61, 0.92), rgba(8, 19, 36, 0.72));
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      padding: 30px;
+    }
+
+    .project-top {
+      display: grid;
+      gap: 28px;
+      grid-template-columns: minmax(0, 0.95fr) minmax(300px, 1.05fr);
+    }
+
+    .project-card h3 {
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      letter-spacing: -0.04em;
+      line-height: 1.1;
+      margin-bottom: 14px;
+    }
+
+    .metrics {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(2, 1fr);
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .metrics li {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      color: var(--soft);
+      font-size: 0.92rem;
+      padding: 12px 14px;
+    }
+
+    .capability-tags {
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      margin-top: 22px;
+      padding-top: 18px;
+    }
+
+    .capability-tags strong {
+      color: var(--text);
+    }
+
+    .leadership-wrap {
+      align-items: stretch;
+      display: grid;
+      gap: 24px;
+      grid-template-columns: 0.85fr 1.15fr;
+    }
+
+    .leadership-card {
+      background: linear-gradient(145deg, rgba(111, 231, 255, 0.14), rgba(157, 124, 255, 0.1));
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+    }
+
+    .leadership-list {
+      display: grid;
+      gap: 14px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .leadership-list li {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      color: var(--soft);
+      padding: 16px 18px;
+    }
+
+    .tech-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tech-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      list-style: none;
+      margin: 16px 0 0;
+      padding: 0;
+    }
+
+    .tech-list li {
+      background: rgba(111, 231, 255, 0.08);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--soft);
+      font-size: 0.9rem;
+      padding: 8px 11px;
+    }
+
+    .contact-card {
+      align-items: center;
+      background: linear-gradient(135deg, rgba(16, 34, 61, 0.95), rgba(9, 23, 43, 0.88));
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      display: grid;
+      gap: 28px;
+      grid-template-columns: minmax(0, 1fr) auto;
+      padding: 34px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: flex-end;
+    }
+
+    .site-footer {
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      padding: 30px 24px 42px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-inner {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      max-width: var(--max-width);
+      gap: 16px;
+    }
+
+    @media (max-width: 980px) {
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+      }
+
+      .hero,
+      .project-top,
+      .leadership-wrap,
+      .contact-card {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 76px;
+      }
+
+      .snapshot-grid,
+      .capability-grid,
+      .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact-links {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 640px) {
+      html {
+        scroll-padding-top: 138px;
+      }
+
+      .nav {
+        padding: 14px 18px;
+      }
+
+      .nav-links {
+        gap: 4px;
+      }
+
+      .nav-links a {
+        font-size: 0.86rem;
+        padding: 7px 9px;
+      }
+
+      .section {
+        padding: 68px 18px;
+      }
+
+      .hero {
+        padding-top: 62px;
+      }
+
+      .cta-row,
+      .button,
+      .contact-links a {
+        width: 100%;
+      }
+
+      .signal-map,
+      .snapshot-grid,
+      .capability-grid,
+      .metrics,
+      .tech-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .flow-line {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .connector {
+        height: 18px;
+        margin-left: 16px;
+        width: 1px;
+      }
+
+      .card,
+      .project-card,
+      .hero-panel,
+      .leadership-card,
+      .contact-card {
+        padding: 22px;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Dat Tran home">
+        <span class="brand-mark" aria-hidden="true">DT</span>
+        <span>Dat Tran</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#capabilities">Capabilities</a></li>
+        <li><a href="#leadership">Leadership</a></li>
+        <li><a href="#tech-stack">Tech Stack</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="section hero" aria-labelledby="hero-heading">
+      <div>
+        <span class="eyebrow">Data + Integration + AI Analytics</span>
+        <h1 id="hero-heading">Dat Tran</h1>
+        <p class="hero-title">Enterprise Data &amp; AI Analytics Architect</p>
+        <p class="hero-statement">I design data platforms, integrations, and AI-enabled analytics systems that help organizations turn fragmented enterprise data into trusted decisions.</p>
+        <p class="hero-support">Data + Integration + AI Analytics · AI automation and copilots for business workflows</p>
+        <div class="cta-row" aria-label="Primary actions">
+          <a class="button button-primary" href="#work">Explore my work</a>
+          <a class="button button-secondary" href="https://www.linkedin.com/in/datqtran" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+        </div>
+        <a class="email-link" href="mailto:quangdatnth@gmail.com"><span>Email</span> quangdatnth@gmail.com</a>
+      </div>
+
+      <aside class="hero-panel" aria-label="Architecture focus areas">
+        <div class="signal-map">
+          <div class="signal"><strong>20+</strong><span>enterprise systems integrated</span></div>
+          <div class="signal"><strong>150+</strong><span>pipelines and workflows</span></div>
+          <div class="signal"><strong>20+</strong><span>dashboards and reports</span></div>
+          <div class="signal"><strong>5+</strong><span>countries supported</span></div>
+        </div>
+        <div class="flow-line" aria-label="Enterprise data flow">
+          <span class="node">Systems</span>
+          <span class="connector" aria-hidden="true"></span>
+          <span class="node">Platforms</span>
+          <span class="connector" aria-hidden="true"></span>
+          <span class="node">Decisions</span>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section" id="snapshot" aria-labelledby="snapshot-heading">
+      <div class="section-heading">
+        <span class="eyebrow">Executive Snapshot</span>
+        <h2 id="snapshot-heading">Credibility across enterprise data, analytics, and automation.</h2>
+        <p>A practical record of designing dependable data foundations, integrating fragmented systems, and delivering analytics outcomes for business stakeholders.</p>
+      </div>
+      <div class="grid snapshot-grid">
+        <div class="card"><span class="stat-value">10+</span><span class="stat-label">years in Data Integration &amp; Analytics</span></div>
+        <div class="card"><span class="stat-value">20+</span><span class="stat-label">enterprise systems integrated</span></div>
+        <div class="card"><span class="stat-value">150+</span><span class="stat-label">data pipelines and workflows</span></div>
+        <div class="card"><span class="stat-value">20+</span><span class="stat-label">dashboards and analytical reports</span></div>
+        <div class="card"><span class="stat-value">5+</span><span class="stat-label">countries supported</span></div>
+        <div class="card"><span class="stat-value">AI</span><span class="stat-label">AI-assisted workflow automation experience</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="capabilities" aria-labelledby="capabilities-heading">
+      <div class="section-heading">
+        <span class="eyebrow">What I Build</span>
+        <h2 id="capabilities-heading">Capabilities that connect architecture with business impact.</h2>
+        <p>Focused on durable platforms, reliable data movement, and analytics experiences that leaders can trust.</p>
+      </div>
+      <div class="grid capability-grid">
+        <article class="card">
+          <h3>Enterprise Data Integration</h3>
+          <p>Connects fragmented source systems into governed data flows that improve reliability, visibility, and operational decision-making.</p>
+        </article>
+        <article class="card">
+          <h3>BI &amp; Decision Intelligence</h3>
+          <p>Transforms scattered reporting into executive-ready dashboards, shared metrics, and insight experiences for faster management decisions.</p>
+        </article>
+        <article class="card">
+          <h3>Data Architecture &amp; Analytics Engineering</h3>
+          <p>Designs data models, pipelines, and semantic layers that make analytics scalable, maintainable, and trusted across domains.</p>
+        </article>
+        <article class="card">
+          <h3>AI Workflow Automation</h3>
+          <p>Applies LLM-assisted workflows, APIs, and orchestration to reduce repetitive analytical work while preserving human review.</p>
+        </article>
+        <article class="card">
+          <h3>Executive Reporting &amp; KPI Standardization</h3>
+          <p>Clarifies business definitions and reporting cadence so leaders can compare performance consistently across teams and regions.</p>
+        </article>
+        <article class="card">
+          <h3>Delivery Leadership</h3>
+          <p>Guides cross-functional delivery from architecture through adoption, balancing technical quality with measurable business outcomes.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="work" aria-labelledby="work-heading">
+      <div class="section-heading">
+        <span class="eyebrow">Featured Work</span>
+        <h2 id="work-heading">Enterprise initiatives described without company names or confidential details.</h2>
+        <p>Representative work across integration, intelligence modernization, and AI-enabled business workflows.</p>
+      </div>
+
+      <div class="work-list">
+        <article class="project-card">
+          <div class="project-top">
+            <div>
+              <h3>Enterprise Data Integration Platform</h3>
+              <p>Designed and led an enterprise data integration platform connecting 20+ source systems across CRM, MIS, school systems, and HR platforms. The platform supported 12+ business units across 5+ countries and enabled reliable data movement for analytics, reporting, and operational decision-making.</p>
+            </div>
+            <ul class="metrics" aria-label="Enterprise Data Integration Platform metrics">
+              <li>20+ enterprise systems integrated</li>
+              <li>150+ pipelines and workflows built</li>
+              <li>12+ business units supported</li>
+              <li>5+ countries supported</li>
+              <li>100+ users and stakeholders impacted</li>
+              <li>90% processing effort reduction</li>
+              <li>30 hours of manual work saved per week</li>
+              <li>Approximately 99% data availability for critical reporting workflows</li>
+            </ul>
+          </div>
+          <p class="capability-tags"><strong>Key capabilities:</strong> Data integration, enterprise systems integration, ETL/ELT pipelines, API integration, data reliability, regional delivery.</p>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <div>
+              <h3>BI &amp; Decision Intelligence Modernization</h3>
+              <p>Led the modernization of business intelligence and decision-support reporting across Sales, Marketing, Operations, HR, Academic, IT, Finance, and Materials Management domains. The initiative transformed fragmented reporting processes into standardized dashboards, semantic models, and executive-ready insights.</p>
+            </div>
+            <ul class="metrics" aria-label="BI and Decision Intelligence Modernization metrics">
+              <li>20+ dashboards and analytical reports delivered</li>
+              <li>50+ executive and management users supported</li>
+              <li>27+ KPIs standardized</li>
+              <li>6+ data and semantic models created</li>
+              <li>Reporting cycle improved from 5 days to 0.5 hours</li>
+              <li>90% manual Excel/reporting reduction</li>
+              <li>Hourly and near real-time refresh patterns enabled</li>
+              <li>30+ recurring monthly users</li>
+            </ul>
+          </div>
+          <p class="capability-tags"><strong>Key capabilities:</strong> Power BI, BI modernization, semantic modeling, KPI standardization, executive reporting, data storytelling, decision intelligence.</p>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <div>
+              <h3>AI Workflow Automation</h3>
+              <p>Designed AI-assisted workflow automation for insight summarization and document analysis, helping business teams reduce repetitive analytical work while keeping human review in the decision loop. The solution combined Python, APIs, LLM capabilities, automation scripts, and n8n-based workflow orchestration.</p>
+            </div>
+            <ul class="metrics" aria-label="AI Workflow Automation metrics">
+              <li>Automated insight summarization and document analysis workflows</li>
+              <li>Supported 15+ users and teams</li>
+              <li>Reduced workflow complexity from 10 manual steps to 2 guided steps</li>
+              <li>Reduced task completion time from 4 hours to approximately 10 minutes</li>
+              <li>Processed 100+ reports, documents, or requests per day</li>
+              <li>Approximately 90% accepted outputs under human-in-the-loop review</li>
+              <li>Improved decision speed while reducing repetitive manual work</li>
+            </ul>
+          </div>
+          <p class="capability-tags"><strong>Key capabilities:</strong> AI workflow automation, LLM-assisted analysis, Python automation, API integration, n8n workflow orchestration, human-in-the-loop review.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="leadership" aria-labelledby="leadership-heading">
+      <div class="leadership-wrap">
+        <div class="leadership-card">
+          <span class="eyebrow">Leadership &amp; Delivery</span>
+          <h2 id="leadership-heading">Execution discipline for complex data transformation.</h2>
+          <p>I operate at the intersection of business priorities, platform architecture, and delivery teams, helping organizations move from fragmented reporting toward governed, scalable analytics capability.</p>
+        </div>
+        <ul class="leadership-list">
+          <li>Leading complex data and integration projects end-to-end.</li>
+          <li>Aligning technical architecture with business goals.</li>
+          <li>Working with cross-functional stakeholders across business and technology teams.</li>
+          <li>Mentoring data engineers, BI developers, and analysts.</li>
+          <li>Bringing structure, governance, and execution discipline to analytics initiatives.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="tech-stack" aria-labelledby="tech-heading">
+      <div class="section-heading">
+        <span class="eyebrow">Tech Stack</span>
+        <h2 id="tech-heading">Tools selected for enterprise-grade data and analytics delivery.</h2>
+        <p>Hands-on across integration, orchestration, BI, cloud platforms, data engineering, and AI-assisted automation.</p>
+      </div>
+      <div class="grid tech-grid">
+        <article class="card">
+          <h3>Data Integration &amp; Orchestration</h3>
+          <ul class="tech-list"><li>Talend</li><li>Apache Airflow</li><li>SSIS</li><li>APIs</li></ul>
+        </article>
+        <article class="card">
+          <h3>BI &amp; Analytics</h3>
+          <ul class="tech-list"><li>Power BI</li><li>Tableau</li><li>SAP BusinessObjects</li><li>Google Data Studio</li></ul>
+        </article>
+        <article class="card">
+          <h3>Cloud &amp; Data Platforms</h3>
+          <ul class="tech-list"><li>Microsoft Fabric</li><li>Azure</li><li>AWS</li><li>GCP</li><li>Dynamics 365</li></ul>
+        </article>
+        <article class="card">
+          <h3>Data Engineering</h3>
+          <ul class="tech-list"><li>Python</li><li>DBT</li><li>SQL</li><li>SAP HANA</li><li>SQL Server</li><li>MySQL</li><li>Oracle</li><li>SingleStore</li></ul>
+        </article>
+        <article class="card">
+          <h3>AI &amp; Automation</h3>
+          <ul class="tech-list"><li>Python automation</li><li>LLM-assisted workflows</li><li>API automation</li><li>n8n</li><li>human-in-the-loop review</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contact-heading">
+      <div class="contact-card">
+        <div>
+          <span class="eyebrow">Contact</span>
+          <h2 id="contact-heading">Strategic data, analytics, and AI workflow conversations.</h2>
+          <p>Open to strategic conversations around enterprise data platforms, analytics modernization, AI-enabled workflows, and leadership roles in data transformation.</p>
+        </div>
+        <div class="contact-links" aria-label="Contact links">
+          <a class="button button-primary" href="mailto:quangdatnth@gmail.com">Email</a>
+          <a class="button button-secondary" href="https://www.linkedin.com/in/datqtran" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="button button-secondary" href="https://github.com/dattranbi" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© 2026 Dat Tran</span>
+      <span>Enterprise Data &amp; AI Analytics Architect</span>
+    </div>
+  </footer>
+</body>
+</html>
