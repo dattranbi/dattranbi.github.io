@@ -1,0 +1,84 @@
+- title: Enterprise Data Integration Platform
+  slug: enterprise-data-integration-platform
+  url: /case-studies/enterprise-data-integration-platform/
+  accent: "#6fe7ff"
+  summary: Designed and led an enterprise data integration platform connecting 20+ source systems across CRM, MIS, school systems, and HR platforms. The platform supported 12+ business units across 5+ countries and enabled reliable data movement for analytics, reporting, and operational decision-making.
+  highlights:
+    - value: 20+
+      label: enterprise systems integrated
+    - value: 150+
+      label: pipelines and workflows built
+    - value: 90%
+      label: processing effort reduction
+  metrics:
+    - 20+ enterprise systems integrated
+    - 150+ pipelines and workflows built
+    - 12+ business units supported
+    - 5+ countries supported
+    - 100+ users and stakeholders impacted
+    - 90% processing effort reduction
+    - 30 hours of manual work saved per week
+    - Approximately 99% data availability for critical reporting workflows
+  capabilities:
+    - Data integration
+    - Enterprise systems integration
+    - ETL/ELT pipelines
+    - API integration
+    - Data reliability
+    - Regional delivery
+- title: BI & Decision Intelligence Modernization
+  slug: bi-decision-intelligence-modernization
+  url: /case-studies/bi-decision-intelligence-modernization/
+  accent: "#9d7cff"
+  summary: Led the modernization of business intelligence and decision-support reporting across Sales, Marketing, Operations, HR, Academic, IT, Finance, and Materials Management domains. The initiative transformed fragmented reporting processes into standardized dashboards, semantic models, and executive-ready insights.
+  highlights:
+    - value: 20+
+      label: dashboards and analytical reports delivered
+    - value: 27+
+      label: KPIs standardized
+    - value: 5d &rarr; 0.5h
+      label: reporting cycle improved
+  metrics:
+    - 20+ dashboards and analytical reports delivered
+    - 50+ executive and management users supported
+    - 27+ KPIs standardized
+    - 6+ data and semantic models created
+    - Reporting cycle improved from 5 days to 0.5 hours
+    - 90% manual Excel/reporting reduction
+    - Hourly and near real-time refresh patterns enabled
+    - 30+ recurring monthly users
+  capabilities:
+    - Power BI
+    - BI modernization
+    - Semantic modeling
+    - KPI standardization
+    - Executive reporting
+    - Data storytelling
+    - Decision intelligence
+- title: AI Workflow Automation
+  slug: ai-workflow-automation
+  url: /case-studies/ai-workflow-automation/
+  accent: "#77f2b2"
+  summary: Designed AI-assisted workflow automation for insight summarization and document analysis, helping business teams reduce repetitive analytical work while keeping human review in the decision loop. The solution combined Python, APIs, LLM capabilities, automation scripts, and n8n-based workflow orchestration.
+  highlights:
+    - value: 10 &rarr; 2
+      label: manual steps reduced to guided steps
+    - value: 4h &rarr; 10m
+      label: task completion time reduced
+    - value: 100+
+      label: reports, documents, or requests processed per day
+  metrics:
+    - Automated insight summarization and document analysis workflows
+    - Supported 15+ users and teams
+    - Reduced workflow complexity from 10 manual steps to 2 guided steps
+    - Reduced task completion time from 4 hours to approximately 10 minutes
+    - Processed 100+ reports, documents, or requests per day
+    - Approximately 90% accepted outputs under human-in-the-loop review
+    - Improved decision speed while reducing repetitive manual work
+  capabilities:
+    - AI workflow automation
+    - LLM-assisted analysis
+    - Python automation
+    - API integration
+    - n8n workflow orchestration
+    - Human-in-the-loop review

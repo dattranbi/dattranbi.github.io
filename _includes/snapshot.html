@@ -1,0 +1,20 @@
+<section class="section reveal" id="snapshot" aria-labelledby="snapshot-heading">
+  <div class="section-heading">
+    <span class="eyebrow">Executive Snapshot</span>
+    <h2 id="snapshot-heading">Credibility across enterprise data, analytics, and automation.</h2>
+    <p>A practical record of designing dependable data foundations, integrating fragmented systems, and delivering analytics outcomes for business stakeholders.</p>
+  </div>
+  <div class="grid snapshot-grid">
+    {% for stat in site.data.stats %}
+      <div class="card stat-card">
+        <span class="stat-icon" aria-hidden="true"><svg class="icon"><use href="#icon-{{ stat.icon }}"></use></svg></span>
+        {% if stat.value %}
+          <span class="stat-value" data-count="{{ stat.value }}" data-suffix="{{ stat.suffix }}">0{{ stat.suffix }}</span>
+        {% else %}
+          <span class="stat-value">{{ stat.display }}</span>
+        {% endif %}
+        <span class="stat-label">{{ stat.label }}</span>
+      </div>
+    {% endfor %}
+  </div>
+</section>

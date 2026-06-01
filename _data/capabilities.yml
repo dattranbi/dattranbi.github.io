@@ -1,0 +1,24 @@
+- title: Enterprise Data Integration
+  icon: network
+  accent: "#6fe7ff"
+  description: Connects fragmented source systems into governed data flows that improve reliability, visibility, and operational decision-making.
+- title: BI & Decision Intelligence
+  icon: dashboard
+  accent: "#9d7cff"
+  description: Transforms scattered reporting into executive-ready dashboards, shared metrics, and insight experiences for faster management decisions.
+- title: Data Architecture & Analytics Engineering
+  icon: layers
+  accent: "#77f2b2"
+  description: Designs data models, pipelines, and semantic layers that make analytics scalable, maintainable, and trusted across domains.
+- title: AI Workflow Automation
+  icon: brain
+  accent: "#ffd166"
+  description: Applies LLM-assisted workflows, APIs, and orchestration to reduce repetitive analytical work while preserving human review.
+- title: Executive Reporting & KPI Standardization
+  icon: target
+  accent: "#ff7aa2"
+  description: Clarifies business definitions and reporting cadence so leaders can compare performance consistently across teams and regions.
+- title: Delivery Leadership
+  icon: users
+  accent: "#7fa5ff"
+  description: Guides cross-functional delivery from architecture through adoption, balancing technical quality with measurable business outcomes.

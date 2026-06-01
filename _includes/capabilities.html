@@ -1,0 +1,16 @@
+<section class="section reveal" id="capabilities" aria-labelledby="capabilities-heading">
+  <div class="section-heading">
+    <span class="eyebrow">What I Build</span>
+    <h2 id="capabilities-heading">Capabilities that connect architecture with business impact.</h2>
+    <p>Focused on durable platforms, reliable data movement, and analytics experiences that leaders can trust.</p>
+  </div>
+  <div class="grid capability-grid">
+    {% for capability in site.data.capabilities %}
+      <article class="card capability-card" style="--card-accent: {{ capability.accent }};">
+        <span class="capability-icon" aria-hidden="true"><svg class="icon"><use href="#icon-{{ capability.icon }}"></use></svg></span>
+        <h3>{{ capability.title }}</h3>
+        <p>{{ capability.description }}</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>

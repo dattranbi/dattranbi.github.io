@@ -1,0 +1,10 @@
+title: Dat Tran | Enterprise Data & AI Analytics Architect
+description: Dat Tran designs data platforms, integrations, and AI-enabled analytics systems for trusted enterprise decisions.
+url: "https://dattranbi.github.io"
+baseurl: ""
+lang: en
+markdown: kramdown
+permalink: pretty
+exclude:
+  - README.md
+  - AGENTS.md

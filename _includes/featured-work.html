@@ -1,0 +1,37 @@
+<section class="section reveal" id="work" aria-labelledby="work-heading">
+  <div class="section-heading">
+    <span class="eyebrow">Featured Work</span>
+    <h2 id="work-heading">Enterprise initiatives described without company names or confidential details.</h2>
+    <p>Representative work across integration, intelligence modernization, and AI-enabled business workflows.</p>
+  </div>
+
+  <div class="work-list">
+    {% for project in site.data.projects %}
+      <article class="project-card" style="--project-accent: {{ project.accent }};">
+        <div class="project-bar" aria-hidden="true"></div>
+        <div class="project-top">
+          <div>
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.summary }}</p>
+            <a class="project-link" href="{{ project.url | relative_url }}">Read case study</a>
+          </div>
+          <div>
+            <div class="metric-strip" aria-label="{{ project.title }} impact highlights">
+              {% for highlight in project.highlights %}
+                <div class="metric-highlight"><strong>{{ highlight.value }}</strong><span>{{ highlight.label }}</span></div>
+              {% endfor %}
+            </div>
+            <ul class="metrics" aria-label="{{ project.title }} metrics">
+              {% for metric in project.metrics %}<li>{{ metric }}</li>{% endfor %}
+            </ul>
+          </div>
+        </div>
+        <div class="capability-tags"><strong>Key capabilities:</strong> {{ project.capabilities | join: ', ' }}.
+          <div class="tag-pills" aria-label="{{ project.title }} keyword tags">
+            {% for capability in project.capabilities %}<span class="tag-pill">{{ capability }}</span>{% endfor %}
+          </div>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>

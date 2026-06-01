@@ -1,0 +1,33 @@
+---
+layout: default
+title: Case Studies
+description: Future-ready case studies for Dat Tran's enterprise data, integration, analytics, and AI workflow work.
+---
+<main id="top">
+  <section class="section reveal is-visible case-index" aria-labelledby="case-index-heading">
+    <div class="section-heading">
+      <span class="eyebrow">Case Studies</span>
+      <h1 id="case-index-heading">Enterprise data, analytics, and AI workflow initiatives.</h1>
+      <p>Representative work described without company names or confidential implementation details.</p>
+    </div>
+    <div class="work-list">
+      {% for project in site.data.projects %}
+        <article class="project-card" style="--project-accent: {{ project.accent }};">
+          <div class="project-bar" aria-hidden="true"></div>
+          <div class="project-top">
+            <div>
+              <h2>{{ project.title }}</h2>
+              <p>{{ project.summary }}</p>
+              <a class="project-link" href="{{ project.url | relative_url }}">Read case study</a>
+            </div>
+            <div class="metric-strip" aria-label="{{ project.title }} impact highlights">
+              {% for highlight in project.highlights %}
+                <div class="metric-highlight"><strong>{{ highlight.value }}</strong><span>{{ highlight.label }}</span></div>
+              {% endfor %}
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+</main>

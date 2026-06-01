@@ -1,0 +1,18 @@
+{% assign profile = site.data.profile %}
+<header class="site-header">
+  <nav class="nav" aria-label="Primary navigation">
+    <a class="brand" href="{{ '/' | relative_url }}#top" aria-label="{{ profile.name }} home">
+      <span class="brand-mark" aria-hidden="true">{{ profile.initials }}</span>
+      <span>{{ profile.name }}</span>
+    </a>
+    <ul class="nav-links">
+      {% for item in site.data.navigation %}
+        {% assign href = item.href %}
+        {% if page.url == '/' and href contains '/#' %}
+          {% assign href = href | remove_first: '/' %}
+        {% endif %}
+        <li><a href="{{ href | relative_url }}">{{ item.label }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>
