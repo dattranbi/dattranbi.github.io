@@ -1,0 +1,22 @@
+<section class="section reveal" id="experience" aria-labelledby="experience-heading">
+  <div class="section-heading">
+    <span class="eyebrow">Experience</span>
+    <h2 id="experience-heading">12+ years across enterprise data, integration, and BI delivery.</h2>
+    <p>The case studies above are described without company names by design — this is the verifiable employer timeline behind them.</p>
+  </div>
+  <ol class="timeline">
+    {% for job in site.data.experience %}
+      <li class="timeline-item">
+        <div class="timeline-marker" aria-hidden="true"></div>
+        <div class="timeline-body">
+          <div class="timeline-top">
+            <h3>{{ job.role }}</h3>
+            <span class="timeline-period">{{ job.period }}</span>
+          </div>
+          <p class="timeline-org">{{ job.company }} &middot; {{ job.location }}</p>
+          <p class="timeline-summary">{{ job.summary }}</p>
+        </div>
+      </li>
+    {% endfor %}
+  </ol>
+</section>

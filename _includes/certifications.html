@@ -1,0 +1,11 @@
+<section class="section reveal" id="certifications" aria-labelledby="cert-heading">
+  <div class="section-heading">
+    <span class="eyebrow">Certifications</span>
+    <h2 id="cert-heading">Credentialed across delivery, analytics, and data platforms.</h2>
+  </div>
+  <ul class="cert-strip">
+    {% for cert in site.data.certifications %}
+      <li class="cert-badge"><strong>{{ cert.name }}</strong><span>{{ cert.issuer }}</span></li>
+    {% endfor %}
+  </ul>
+</section>

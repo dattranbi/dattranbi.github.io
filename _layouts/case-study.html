@@ -34,6 +34,21 @@
           </div>
         </div>
       {% endif %}
+
+      <div class="case-nav-footer">
+        <a class="back-link" href="{{ '/case-studies/' | relative_url }}">&larr; Back to Case Studies</a>
+        {% assign other_projects = site.data.projects | where_exp: "p", "p.title != page.title" %}
+        {% if other_projects.size > 0 %}
+          <div class="case-more">
+            <span class="case-more-label">More case studies</span>
+            <div class="case-more-links">
+              {% for project in other_projects %}
+                <a href="{{ project.url | relative_url }}">{{ project.title }} &rarr;</a>
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+      </div>
     </article>
   </main>
   {% include footer.html %}

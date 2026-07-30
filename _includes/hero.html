@@ -1,7 +1,10 @@
 {% assign profile = site.data.profile %}
 <section class="section hero reveal is-visible" aria-labelledby="hero-heading">
   <div class="hero-copy">
-    <span class="eyebrow">{{ profile.eyebrow }}</span>
+    <div class="hero-identity">
+      <img class="hero-avatar" src="{{ '/assets/images/dat-tran-headshot.jpg' | relative_url }}" alt="Portrait of {{ profile.name }}" width="64" height="64" decoding="async">
+      <span class="eyebrow">{{ profile.eyebrow }}</span>
+    </div>
     <h1 id="hero-heading">{{ profile.name }}</h1>
     <p class="hero-title">{{ profile.title }}</p>
     <p class="hero-statement">{{ profile.positioning }}</p>
