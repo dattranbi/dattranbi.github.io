@@ -3,6 +3,7 @@
 {% unless page_title contains profile.name %}{% assign page_title = page_title | append: ' | ' | append: profile.name %}{% endunless %}
 {% assign meta_description = page.description | default: page.summary | default: profile.meta_description | default: site.description %}
 {% assign canonical_url = page.url | absolute_url %}
+{% assign og_image_url = page.og_image | default: '/assets/images/og-cover.png' | absolute_url %}
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="{{ meta_description | escape }}">
@@ -10,8 +11,36 @@
 <meta property="og:description" content="{{ meta_description | escape }}">
 <meta property="og:type" content="{{ page.og_type | default: 'website' }}">
 <meta property="og:url" content="{{ canonical_url }}">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="{{ og_image_url }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="{{ profile.name }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page_title | escape }}">
+<meta name="twitter:description" content="{{ meta_description | escape }}">
+<meta name="twitter:image" content="{{ og_image_url }}">
 <link rel="canonical" href="{{ canonical_url }}">
 <meta name="theme-color" content="#06101f">
+<link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="alternate icon" href="{{ '/favicon.ico' | relative_url }}">
+<link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
 <title>{{ page_title | escape }}</title>
+{% if page.url == '/' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ profile.name | jsonify }},
+  "jobTitle": {{ profile.title | jsonify }},
+  "description": {{ profile.meta_description | jsonify }},
+  "url": {{ site.url | jsonify }},
+  "image": {{ og_image_url | jsonify }},
+  "email": "mailto:{{ profile.email }}",
+  "sameAs": [
+    {{ profile.linkedin | jsonify }},
+    {{ profile.github | jsonify }}
+  ]
+}
+</script>
+{% endif %}

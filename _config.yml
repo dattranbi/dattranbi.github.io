@@ -5,6 +5,8 @@ baseurl: ""
 lang: en
 markdown: kramdown
 permalink: pretty
+plugins:
+  - jekyll-sitemap
 exclude:
   - README.md
   - AGENTS.md
